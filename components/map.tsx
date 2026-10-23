@@ -7,6 +7,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { MapFilters, MediaLocation } from "@/lib/airtable/types";
 import { hasActiveFilters, updateQueryParameters } from "@/lib/utils";
 import { useIsTablet } from "@/components/hooks/use-tablet";
+import { ENABLE_INITIAL_RANDOM_SELECTION } from "@/lib/feature-flags";
 
 import {
   addDataLayer,
@@ -255,6 +256,7 @@ applyProjectionForZoom(
   
   useEffect(() => {
 if (
+  !ENABLE_INITIAL_RANDOM_SELECTION ||
   enableInitialRandomSelection === false ||
   selectedMediaPoint ||
   mediaId ||
