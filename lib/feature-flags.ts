@@ -14,4 +14,4 @@ export const SHOW_MEDIA_IN_EMPTY_SEARCH = false;
  * Flip to `false` to leave the catalog map unselected on load.
  * When `true`, a random Media Location is chosen if none is already selected.
  */
-export const ENABLE_INITIAL_RANDOM_SELECTION = true;
+export const ENABLE_INITIAL_RANDOM_SELECTION = false;
